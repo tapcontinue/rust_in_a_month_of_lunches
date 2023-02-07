@@ -76,10 +76,25 @@
 
 
 // * Example 10 - Make a function
-fn number() -> i32{
-    8
-}
+// fn number() -> i32{
+//     8
+// }
 
-fn main(){
-    println!("Hello, world number {}!", number());
-}
+// fn main(){
+//     println!("Hello, world number {}!", number());
+// }
+
+//* Example 11 - more functions  - rust will not infer in ()
+// fn multiply(number_one: i32, number_two:i32){
+//     let result =  number_one * number_two;
+//     println!("{number_one} times {number_two} is {result}")
+// }
+
+//? The {variable_name} syntax only dates back to rust 21
+
+// fn main(){
+//     multiply(8, 9);
+//     let some_number = 10;
+//     let some_other_number =2;
+//     multiply(some_number, some_other_number);
+// }
