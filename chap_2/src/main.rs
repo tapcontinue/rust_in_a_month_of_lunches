@@ -72,3 +72,5 @@ fn return_str() -> &String {
 fn main() {
     let country = return_str();
 }
+
+// * 2.5 Mutable References
