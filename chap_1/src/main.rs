@@ -115,12 +115,3 @@
 //     println!("{}", my_number) // Prints 9.2
 // }
 
-// ! 2.1  The stack, the heap, and pointers
-
-
-// fn main() {
-//     let name = "자우림"; // This is a Korean name. No problem, because a &str is UTF-8.
-//     let other_name = String::from("Adrian Fahrenheit Țepeș"); // Ț and ș are no problem in UTF-8.
-
-//     println!("{}", name)
-// }
