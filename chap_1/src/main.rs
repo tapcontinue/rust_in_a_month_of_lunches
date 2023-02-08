@@ -98,3 +98,29 @@
 //     let some_other_number =2;
 //     multiply(some_number, some_other_number);
 // }
+
+// * 1.9 Mutability (changing)
+// //* I've never attempted this, but you can't change types
+
+// fn main() {
+//     let mut my_variable = 8; // it is now an i32. That can't be changed
+//     my_variable = "Hello, world!"; // ⚠
+// }
+
+// *Shadowing
+// fn main() {
+//     let my_number = 8; // This is an i32
+//     println!("{}", my_number); // prints 8
+//     let my_number = "Taco"; // This is an f64 with the same name. But it's not the first my_number - it is completely different!
+//     println!("{}", my_number) // Prints 9.2
+// }
+
+// ! 2.1  The stack, the heap, and pointers
+
+
+// fn main() {
+//     let name = "자우림"; // This is a Korean name. No problem, because a &str is UTF-8.
+//     let other_name = String::from("Adrian Fahrenheit Țepeș"); // Ț and ș are no problem in UTF-8.
+
+//     println!("{}", name)
+// }
