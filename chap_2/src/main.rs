@@ -63,14 +63,71 @@
 
 // *More on references
 
-fn return_str() -> &String {
-    let country = String::from("Austria");
-    let country_ref = &country;
-    country_ref // ⚠
-}
+// fn return_str() -> &String {
+//     let country = String::from("Austria");
+//     let country_ref = &country;
+//     country_ref // ⚠
+// }
 
-fn main() {
-    let country = return_str();
-}
+// fn main() {
+//     let country = return_str();
+// }
 
 // * 2.5 Mutable References
+
+//* Example 1
+// fn main() {
+//     let mut my_number = 8; // don't forget to write mut here!
+//     let num_ref = &mut my_number;
+//     println!("{num_ref}")
+// }
+
+//* Example 2
+// fn main() {
+//     let mut my_number = 8;
+//     let num_ref = &mut my_number;
+//     *num_ref += 10; // Use * to change the i32 value.
+//     println!("{}", my_number);
+
+//     let second_number = 800;
+//     let triple_reference = &&&second_number;
+//     println!(
+//         "Second_number = triple_reference? {}",
+//         second_number == ***triple_reference
+//     );
+// }
+
+//* Example 3 - This breaks
+// fn main() {
+//     let mut number = 10;
+//     let number_ref = &number;
+//     let number_change = &mut number;
+//     *number_change += 10;
+//     println!("{}", number_ref); // ⚠
+// }
+
+// *Example 4 - But this works
+// fn main() {
+//     let mut number = 10;
+//     let number_change = &mut number; // create a mutable reference
+//     *number_change += 10; // use mutable reference to add 10
+//     let number_ref = &number; // create an immutable reference
+//     println!("{}", number_ref); // print the immutable reference
+// }
+
+//* 2.6 Shadowing
+// *Example 1
+// fn main() {
+//     let country = String::from("Austria");
+//     let country_ref = &country;
+//     let country = 8;
+//     println!("{}, {}", country_ref, country);
+// }
+
+// *Example 2
+fn main() {
+    let country = String::from("Austria"); // Now we have a String called country
+    let country_ref = &country; // country_ref is a reference to this data. It's not going to change
+    let country = 8; // Now we have a variable called country that is an i8. But it has no relation to the other one, or to country_ref
+    println!("{}, {}", country_ref, country); // country_ref still refers to the data of String::from("Austria") that we gave it.
+}
