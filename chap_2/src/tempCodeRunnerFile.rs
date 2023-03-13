@@ -1,7 +1,5 @@
 fn main() {
-    let mut number = 10;
-    let number_ref = &number;
-    let number_change = &mut number;
-    *number_change += 10;
-    println!("{}", number_ref); // ⚠
+    let mut my_number = 8; // don't forget to write mut here!
+    let num_ref = &mut my_number;
+    println!("{num_ref}")
 }
